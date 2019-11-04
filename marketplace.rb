@@ -1,51 +1,31 @@
 class Item
+    attr_reader :name, :price, :dispenser
+    attr_writer :name, :price, :dispenser
+    
     def initialize(name, price, dispenser)
         @name = name
         @price = price
         @dispenser = dispenser
     end
-    def getName()
-        @name
-    end
-    def getPrice()
-        @price
-    end
-    def setName=(name)
-        @name = name
-    end
-    def setPrice=(price)
-        @price = price
-    end
 end
 
 class Cart
+    attr_reader :items
+
     def initialize()
-        @itens = []
+        @items = []
     end
     def add(item)
-        @itens << item
+        @items << item
     end 
-    def getItens()
-        @itens
-    end
 end
 
 class Person
+    attr_reader :name, :cart
+    attr_writer :name, :cart
     def initialize(name)
         @name = name
         @cart = Cart.new()
-    end
-    def setName=(name)
-        @name = name
-    end
-    def getName()
-        @name
-    end
-    def setCart(cart)
-        @cart = cart
-    end
-    def getCart()
-        @cart
     end
 end
 
@@ -54,16 +34,14 @@ person = []
 person << Person.new("João")
 
 item = Item.new("Banana", "R$ 4,00", "same")
-person[0].getCart.add(item)
+person[0].cart.add(item)
 
 item = Item.new("Maçâ", "R$ 6,00", "same")
-person[0].getCart.add(item)
+person[0].cart.add(item)
 
 item = Item.new("Uva", "R$ 3,00", "same")
-person[0].getCart.add(item)
+person[0].cart.add(item)
 
-print person[0].getCart.getItens[0].getName
-
-person[0].getCart.getItens.each do |i|
-    puts person[0].getCart.getItens[i].getName
+person[0].cart.items.each do |i|
+    puts i.name
 end
