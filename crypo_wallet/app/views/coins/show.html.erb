@@ -1,18 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= @coin.human_attribute_name(:description)%></strong>
   <%= @coin.description %>
 </p>
 
 <p>
-  <strong>Acronym:</strong>
+  <strong><%= @coin.human_attribute_name(:acronym)%></strong>
   <%= @coin.acronym %>
 </p>
 
 <p>
-  <strong>Url image:</strong>
+  <strong><%= @coin.human_attribute_name(:url_image)%></strong>
   <%= @coin.url_image %>
+</p>
+<p>
+  <strong><%= @coin.human_attribute_name(:description)%></strong>
+  <%= @coin.mining_type.description%>
 </p>
 
 <%= link_to 'Edit', edit_coin_path(@coin) %> |

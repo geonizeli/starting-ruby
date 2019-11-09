@@ -26,6 +26,17 @@
     <%= form.text_field :url_image %>
   </div>
 
+  <div class="field">
+    <%= form.label :mining_type_id %>
+    <%=
+    form.select("mining_type_id",
+    @mining_type_options,
+    # alternative :MiningType.all.collect { |m| [ m.description, m.id ] },
+    {include_blank: t('form.select')})
+    %>
+
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
