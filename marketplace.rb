@@ -21,27 +21,41 @@ class Cart
 end
 
 class Person
-    attr_reader :name, :cart
-    attr_writer :name, :cart
+    attr_reader :name, :cart, :total
+    attr_writer :name
     def initialize(name)
         @name = name
-        @cart = Cart.new()
+        @cart = []
+        @total = 0
     end
+    def add(item)
+        @cart << item
+        @total += item.price
+    end
+    def remove(item_id)
+        @total -= @cart[item_id].price
+        @cart.pop(item_id)
+    end
+        
 end
 
-person = []
+person = Person.new("João")
 
-person << Person.new("João")
+item = Item.new("Banana", 2.34, "same")
+person.add(item)
 
-item = Item.new("Banana", "R$ 4,00", "same")
-person[0].cart.add(item)
+item = Item.new("Maçâ", 5.33, "same")
+person.add(item)
 
-item = Item.new("Maçâ", "R$ 6,00", "same")
-person[0].cart.add(item)
+item = Item.new("Uva", 3.20, "same")
+person.add(item)
 
-item = Item.new("Uva", "R$ 3,00", "same")
-person[0].cart.add(item)
-
-person[0].cart.items.each do |i|
-    puts i.name
+person.cart.each do |item|
+    puts item.name
 end
+
+puts "Total: #{person.total}"
+
+person.remove(1)
+
+puts "Total: #{person.total}"
