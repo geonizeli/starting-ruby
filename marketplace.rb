@@ -9,17 +9,6 @@ class Item
     end
 end
 
-class Cart
-    attr_reader :items
-
-    def initialize()
-        @items = []
-    end
-    def add(item)
-        @items << item
-    end 
-end
-
 class Person
     attr_reader :name, :cart, :total
     attr_writer :name
@@ -56,6 +45,9 @@ end
 
 puts "Total: #{person.total}"
 
+puts "Removendo maçã"
 person.remove(1)
 
-puts "Total: #{person.total}"
+puts "Novo total: #{person.total}"
+
+gets

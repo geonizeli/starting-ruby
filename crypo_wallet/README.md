@@ -1,7 +1,24 @@
-# Crypto Wallet
+# README
 
-Projeto de registrador de moedas virutais do curso https://www.udemy.com/share/101vRoCUUbdV9TQHo=/
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* Ruby: 2.6.5p114
+Things you may want to cover:
 
-* Rails: 5.2.3
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

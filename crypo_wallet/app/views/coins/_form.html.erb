@@ -4,9 +4,9 @@
       <h2><%= pluralize(coin.errors.count, "error") %> prohibited this coin from being saved:</h2>
 
       <ul>
-      <% coin.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% coin.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -24,17 +24,6 @@
   <div class="field">
     <%= form.label :url_image %>
     <%= form.text_field :url_image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mining_type_id %>
-    <%=
-    form.select("mining_type_id",
-    @mining_type_options,
-    # alternative :MiningType.all.collect { |m| [ m.description, m.id ] },
-    {include_blank: t('form.select')})
-    %>
-
   </div>
 
   <div class="actions">

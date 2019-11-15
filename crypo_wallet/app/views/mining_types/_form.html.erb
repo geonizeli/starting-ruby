@@ -4,9 +4,9 @@
       <h2><%= pluralize(mining_type.errors.count, "error") %> prohibited this mining_type from being saved:</h2>
 
       <ul>
-      <% mining_type.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% mining_type.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
