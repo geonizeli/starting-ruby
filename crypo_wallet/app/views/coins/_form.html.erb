@@ -30,9 +30,9 @@
     <%= form.label :mining_type_id %>
     <%= form.select("mining_type_id",
     @set_mining_type_options,
-    {include_blank: 'Selecione...'})
-    %>  
- </div>
+    { include_blank: 'Selecione...' },
+    class:"form-control") %>
+  </div>
 
   <div class="actions">
     <%= form.submit nil, class:"btn btn-primary"  %>
