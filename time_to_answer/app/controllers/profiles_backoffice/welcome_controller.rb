@@ -1,4 +1,4 @@
-class ProfilesBackoffice::WelcomeController < ProfileBackofficeController
+class ProfilesBackoffice::WelcomeController < ProfilesBackofficeController
   def index
   end
 end
