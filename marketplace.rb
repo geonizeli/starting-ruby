@@ -50,4 +50,3 @@ person.remove(1)
 
 puts "Novo total: #{person.total}"
 
-gets
