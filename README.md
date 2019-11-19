@@ -1,10 +1,10 @@
 # Repo dedicado a estudos sobre Ruby e Ruby on Rails
 
 ## Marketplace.rb
-Loja com marketplace
 
-## crypto_wallet
-Registro de moedas virtuais
+Classes para um loja com marketplace,realizei para testar a criação de Classes em Ruby
 
-## time_to_answer
-Website de questõe de concurso
+## cripto_wallet
+
+Registre tipos de cripto moedas e referencie nelas o tipo de mineração.
+(belongs_to na Moeda e has_many nos Tipos de Mineração)
